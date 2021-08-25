@@ -17,10 +17,10 @@ namespace realworldOneTest.Controllers
     public class CatWithBAuthController : ControllerBase
     {
 
-        CatBusinessLogic _catBusinessLogic;
+        ICatBusinessLogic _catBusinessLogic;
         private readonly ILogger _log;
 
-        public CatWithBAuthController(ILogger<CatWithBAuthController> logger, CatBusinessLogic catBusinessLogic)
+        public CatWithBAuthController(ILogger<CatWithBAuthController> logger, ICatBusinessLogic catBusinessLogic)
         {
             _log = logger;
             _catBusinessLogic = catBusinessLogic;

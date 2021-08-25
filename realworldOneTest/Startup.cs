@@ -42,7 +42,8 @@ namespace realworldOneTest
 
 
 
-            services.AddSingleton(typeof(ICatService), new CatService());
+            services.AddScoped<ICatService, CatService>();
+            services.AddScoped<ICatBusinessLogic, CatBusinessLogic>();
 
             Environment.SetEnvironmentVariable("Secret", Configuration["JWT:Secret"]);
 

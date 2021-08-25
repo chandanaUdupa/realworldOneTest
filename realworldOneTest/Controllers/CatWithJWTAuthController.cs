@@ -15,10 +15,10 @@ namespace realworldOneTest.Controllers
     public class CatWithJWTAuthController : ControllerBase
     {
         ILogger _log;
-        CatBusinessLogic _catBusinessLogic;
+        ICatBusinessLogic _catBusinessLogic;
 
 
-        public CatWithJWTAuthController(ILogger<CatWithJWTAuthController> logger, CatBusinessLogic catBusinessLogic)
+        public CatWithJWTAuthController(ILogger<CatWithJWTAuthController> logger, ICatBusinessLogic catBusinessLogic)
         {
             _log = logger;
             _catBusinessLogic = catBusinessLogic;
